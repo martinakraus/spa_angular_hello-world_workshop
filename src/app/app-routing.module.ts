@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '@auth0/auth0-angular';
+import { CallbackComponent } from './features/callback/callback.component';
 
 const routes: Routes = [
   {
@@ -37,9 +38,7 @@ const routes: Routes = [
   {
     path: 'callback',
     loadChildren: () =>
-      import('./features/callback/callback.module').then(
-        (m) => m.CallbackModule
-      ),
+      import('./features/callback/callback.module').then((m) => m.CallbackModule),
   },
   {
     path: '**',
