@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 import { SharedModule } from "@app/shared";
 
 @Component({
@@ -9,4 +9,5 @@ import { SharedModule } from "@app/shared";
     SharedModule
   ]
 })
-export default class NotFoundComponent {}
+export default class NotFoundComponent {
+}

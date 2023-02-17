@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { Auth0ResourceModel } from '@app/core';
+import { Component } from "@angular/core";
+import { Auth0ResourceModel } from "@app/core";
 
 @Component({
-  selector: 'app-footer',
+  selector: "app-footer",
   template: `
     <footer class="page-footer">
       <div class="page-footer-grid">
@@ -64,25 +64,25 @@ import { Auth0ResourceModel } from '@app/core';
         </div>
       </div>
     </footer>
-  `,
+  `
 })
 export class PageFooterComponent {
   resourceList: Auth0ResourceModel[] = [
     {
-      path: 'https://auth0.com/why-auth0/',
-      label: 'Why Auth0',
+      path: "https://auth0.com/why-auth0/",
+      label: "Why Auth0"
     },
     {
-      path: 'https://auth0.com/docs/get-started',
-      label: 'How It Works',
+      path: "https://auth0.com/docs/get-started",
+      label: "How It Works"
     },
     {
-      path: 'https://auth0.com/blog/developers/',
-      label: 'Developer Blog',
+      path: "https://auth0.com/blog/developers/",
+      label: "Developer Blog"
     },
     {
-      path: 'https://auth0.com/contact-us',
-      label: 'Contact an Expert',
-    },
+      path: "https://auth0.com/contact-us",
+      label: "Contact an Expert"
+    }
   ];
 }

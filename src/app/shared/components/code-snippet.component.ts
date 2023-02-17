@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-code-snippet',
+  selector: "app-code-snippet",
   template: `
     <div class="code-snippet">
       <span class="code-snippet__title">{{ title }}</span>
@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
         </div>
       </div>
     </div>
-  `,
+  `
 })
 export class CodeSnippetComponent {
   @Input() code: string | undefined;

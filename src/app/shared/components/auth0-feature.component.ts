@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-auth0-feature',
+  selector: "app-auth0-feature",
   template: `
     <a
       class="auth0-feature"
@@ -19,7 +19,7 @@ import { Component, Input } from '@angular/core';
       </h3>
       <p class="auth0-feature__description">{{ description }}</p>
     </a>
-  `,
+  `
 })
 export class Auth0FeatureComponent {
   @Input() title: string | undefined;

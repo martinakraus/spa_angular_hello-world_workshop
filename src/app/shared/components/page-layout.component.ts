@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-page-layout',
+  selector: "app-page-layout",
   template: `
     <div class="page-layout">
       <app-nav-bar></app-nav-bar>
@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
       </div>
       <app-footer></app-footer>
     </div>
-  `,
+  `
 })
-export class PageLayoutComponent {}
+export class PageLayoutComponent {
+}

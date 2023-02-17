@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-auth0-features',
+  selector: "app-auth0-features",
   template: `
     <div class="auth0-features">
       <h2 class="auth0-features__title">Explore Auth0 Features</h2>
@@ -32,6 +32,7 @@ import { Component } from '@angular/core';
         ></app-auth0-feature>
       </div>
     </div>
-  `,
+  `
 })
-export class Auth0FeaturesComponent {}
+export class Auth0FeaturesComponent {
+}

@@ -1,14 +1,15 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import axios, { AxiosRequestConfig } from 'axios';
-import { catchError, mergeMap, Observable, of } from 'rxjs';
-import { ApiResponseModel, AppErrorModel, RequestConfigModel } from '../models';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import axios, { AxiosRequestConfig } from "axios";
+import { catchError, mergeMap, Observable, of } from "rxjs";
+import { ApiResponseModel, AppErrorModel, RequestConfigModel } from "../models";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class ExternalApiService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   callExternalApiWithAxios = async (options: {
     config: AxiosRequestConfig;
@@ -19,7 +20,7 @@ export class ExternalApiService {
 
       return {
         data,
-        error: null,
+        error: null
       };
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
@@ -27,7 +28,7 @@ export class ExternalApiService {
 
         const { response } = axiosError;
 
-        let message = 'http request failed';
+        let message = "http request failed";
 
         if (response && response.statusText) {
           message = response.statusText;
@@ -44,16 +45,16 @@ export class ExternalApiService {
         return {
           data: null,
           error: {
-            message,
-          },
+            message
+          }
         };
       }
 
       return {
         data: null,
         error: {
-          message: (error as Error).message,
-        },
+          message: (error as Error).message
+        }
       };
     }
   };
@@ -65,22 +66,22 @@ export class ExternalApiService {
         mergeMap((data) => {
           return of({
             data: data,
-            error: null,
+            error: null
           });
         }),
         catchError((err) => {
           if (err.error && err.status) {
             return of({
               data: null,
-              error: err.error,
+              error: err.error
             });
           }
 
           return of({
             data: null,
             error: {
-              message: err.message,
-            },
+              message: err.message
+            }
           });
         })
       );

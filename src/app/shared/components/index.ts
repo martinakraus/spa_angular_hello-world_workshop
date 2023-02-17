@@ -9,13 +9,13 @@ import { PageLayoutComponent } from "./page-layout.component";
 import { PageLoaderComponent } from "./page-loader.component";
 
 export const COMPONENTS = [
-    ...NAVIGATION_COMPONENTS,
-    Auth0FeatureComponent,
-    Auth0FeaturesComponent,
-    CodeSnippetComponent,
-    HeroBannerComponent,
-    PageFooterHyperlinkComponent,
-    PageFooterComponent,
-    PageLayoutComponent,
-    PageLoaderComponent
+  ...NAVIGATION_COMPONENTS,
+  Auth0FeatureComponent,
+  Auth0FeaturesComponent,
+  CodeSnippetComponent,
+  HeroBannerComponent,
+  PageFooterHyperlinkComponent,
+  PageFooterComponent,
+  PageLayoutComponent,
+  PageLoaderComponent
 ];

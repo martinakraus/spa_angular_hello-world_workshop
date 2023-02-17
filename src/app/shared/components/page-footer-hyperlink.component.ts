@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-page-footer-hyperlink',
+  selector: "app-page-footer-hyperlink",
   template: `
     <a
       [href]="path"
@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
     >
       <ng-content></ng-content>
     </a>
-  `,
+  `
 })
 export class PageFooterHyperlinkComponent {
   @Input() path: string | undefined;

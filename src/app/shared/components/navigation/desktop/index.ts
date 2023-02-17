@@ -5,9 +5,9 @@ import { NavBarTabsComponent } from "./nav-bar-tabs.component";
 import { NavBarComponent } from "./nav-bar.component";
 
 export const DESKTOP_COMPONENTS = [
-    NavBarBrandComponent,
-    NavBarButtonsComponent,
-    NavBarTabComponent,
-    NavBarTabsComponent,
-    NavBarComponent
+  NavBarBrandComponent,
+  NavBarButtonsComponent,
+  NavBarTabComponent,
+  NavBarTabsComponent,
+  NavBarComponent
 ];
