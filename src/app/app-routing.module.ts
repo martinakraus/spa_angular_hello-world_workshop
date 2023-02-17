@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from "./features/home/home.component";
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () =>
-      import('./features/home/home.module').then((m) => m.HomeModule),
+    redirectTo: '/home'
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: 'profile',
@@ -32,10 +36,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    loadChildren: () =>
-      import('./features/not-found/not-found.module').then(
-        (m) => m.NotFoundModule
-      ),
+    loadComponent: () => import('./features/not-found/not-found.component'),
   },
 ];
 
