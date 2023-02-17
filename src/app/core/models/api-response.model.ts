@@ -1,4 +1,4 @@
-import { AppErrorModel } from './app-error.model';
+import { AppErrorModel } from "./app-error.model";
 
 export interface ApiResponseModel {
   data: unknown;

@@ -5,7 +5,4 @@
   "api-messages-protected": {
     "text": "This is a protected message."
   },
-  "api-messages-admin": {
-    "text": "This is an admin message."
-  }
 }

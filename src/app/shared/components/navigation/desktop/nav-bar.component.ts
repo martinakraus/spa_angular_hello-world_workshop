@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-nav-bar',
+  selector: "app-nav-bar",
   template: `
     <div class="nav-bar__container">
       <nav class="nav-bar">
@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
         <app-nav-bar-buttons></app-nav-bar-buttons>
       </nav>
     </div>
-  `,
+  `
 })
-export class NavBarComponent {}
+export class NavBarComponent {
+}

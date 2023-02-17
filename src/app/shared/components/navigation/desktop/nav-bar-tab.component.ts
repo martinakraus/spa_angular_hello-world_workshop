@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-nav-bar-tab',
+  selector: "app-nav-bar-tab",
   template: `
     <a
       [routerLink]="path"
@@ -10,7 +10,7 @@ import { Component, Input } from '@angular/core';
     >
       {{ label }}
     </a>
-  `,
+  `
 })
 export class NavBarTabComponent {
   @Input() path: string | undefined;

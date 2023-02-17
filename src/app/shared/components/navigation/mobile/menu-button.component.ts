@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
-  selector: 'app-menu-button',
+  selector: "app-menu-button",
   template: `
     <span
       (click)="onButtonClick()"
@@ -10,7 +10,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
     >
       menu
     </span>
-  `,
+  `
 })
 export class MenuButtonComponent {
   @Output() menuButtonClick = new EventEmitter<void>();

@@ -1,7 +1,7 @@
 export interface RequestConfigModel {
   url: string;
   method: string;
-  headers: {
+  headers?: {
     [index: string]: string;
   };
 }

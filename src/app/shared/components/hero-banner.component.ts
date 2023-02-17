@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-hero-banner',
+  selector: "app-hero-banner",
   template: `
     <div class="hero-banner hero-banner--aqua-emerald">
       <div class="hero-banner__logo">
@@ -22,8 +22,8 @@ import { Component } from '@angular/core';
         Check out the Angular code sample →
       </a>
     </div>
-  `,
+  `
 })
 export class HeroBannerComponent {
-  logo = 'https://cdn.auth0.com/blog/developer-hub/angular-logo.svg';
+  logo = "https://cdn.auth0.com/blog/developer-hub/angular-logo.svg";
 }

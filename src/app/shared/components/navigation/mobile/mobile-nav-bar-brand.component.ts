@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
-  selector: 'app-mobile-nav-bar-brand',
+  selector: "app-mobile-nav-bar-brand",
   template: `
     <div class="mobile-nav-bar__brand">
       <a (click)="onMobileNavBarBrandClick()" routerLink="/">
@@ -14,7 +14,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
         />
       </a>
     </div>
-  `,
+  `
 })
 export class MobileNavBarBrandComponent {
   @Output() mobileNavBarBrandClick = new EventEmitter<void>();

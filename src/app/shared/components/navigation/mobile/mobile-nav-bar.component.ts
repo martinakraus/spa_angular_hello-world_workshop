@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { NavigationEnd, Router } from "@angular/router";
 
 @Component({
-  selector: 'app-mobile-nav-bar',
+  selector: "app-mobile-nav-bar",
   template: `
     <div class="mobile-nav-bar__container">
       <nav class="mobile-nav-bar">
@@ -27,23 +27,24 @@ import { NavigationEnd, Router } from '@angular/router';
         </div>
       </nav>
     </div>
-  `,
+  `
 })
 export class MobileNavBarComponent implements OnInit {
   MobileMenuState = {
-    OPEN: 'open',
-    CLOSED: 'closed',
+    OPEN: "open",
+    CLOSED: "closed"
   };
 
   MobileMenuIcon = {
-    CLOSE: 'close',
-    MENU: 'menu',
+    CLOSE: "close",
+    MENU: "menu"
   };
 
   mobileMenuState = this.MobileMenuState.CLOSED;
   mobileMenuIcon = this.MobileMenuIcon.MENU;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
     this.router.events.subscribe((ev) => {
@@ -72,13 +73,13 @@ export class MobileNavBarComponent implements OnInit {
   }
 
   closeMobileMenu() {
-    document.body.classList.remove('mobile-scroll-lock');
+    document.body.classList.remove("mobile-scroll-lock");
     this.mobileMenuState = this.MobileMenuState.CLOSED;
     this.mobileMenuIcon = this.MobileMenuIcon.MENU;
   }
 
   openMobileMenu() {
-    document.body.classList.add('mobile-scroll-lock');
+    document.body.classList.add("mobile-scroll-lock");
     this.mobileMenuState = this.MobileMenuState.OPEN;
     this.mobileMenuIcon = this.MobileMenuIcon.CLOSE;
   }

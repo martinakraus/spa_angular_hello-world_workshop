@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
-  selector: 'app-mobile-nav-bar-tab',
+  selector: "app-mobile-nav-bar-tab",
   template: `
     <a
       (click)="onMobileNavBarTabClick()"
@@ -11,7 +11,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
     >
       {{ label }}
     </a>
-  `,
+  `
 })
 export class MobileNavBarTabComponent {
   @Input() path: string | undefined;

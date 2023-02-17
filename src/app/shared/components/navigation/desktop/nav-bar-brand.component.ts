@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-nav-bar-brand',
+  selector: "app-nav-bar-brand",
   template: `
     <div class="nav-bar__brand">
       <a routerLink="/">
@@ -14,6 +14,7 @@ import { Component } from '@angular/core';
         />
       </a>
     </div>
-  `,
+  `
 })
-export class NavBarBrandComponent {}
+export class NavBarBrandComponent {
+}

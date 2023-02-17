@@ -1,14 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { MessageService } from '@app/core';
+import { Component, OnInit } from "@angular/core";
+import { MessageService } from "@app/core";
+import { SharedModule } from "@app/shared";
 
 @Component({
-  selector: 'app-protected',
-  templateUrl: './protected.component.html',
+  selector: "app-protected",
+  standalone: true,
+  imports: [
+    SharedModule
+  ],
+  templateUrl: "./protected.component.html"
 })
-export class ProtectedComponent implements OnInit {
-  message = '';
+export default class ProtectedComponent implements OnInit {
+  message = "";
 
-  constructor(public messageService: MessageService) {}
+  constructor(public messageService: MessageService) {
+  }
 
   ngOnInit(): void {
     this.messageService.getProtectedResource().subscribe((response) => {

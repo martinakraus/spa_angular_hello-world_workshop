@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
-  selector: 'app-close-button',
+  selector: "app-close-button",
   template: `
     <span
       (click)="onButtonClick()"
@@ -10,7 +10,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
     >
       close
     </span>
-  `,
+  `
 })
 export class CloseButtonComponent {
   @Output() closeButtonClick = new EventEmitter<void>();

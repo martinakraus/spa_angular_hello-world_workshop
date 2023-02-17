@@ -1,22 +1,21 @@
-import { Injectable } from '@angular/core';
-import { mergeMap, Observable, of } from 'rxjs';
-import { environment as env } from '../../../environments/environment';
-import { ApiResponseModel, MessageModel, RequestConfigModel } from '../models';
-import { ExternalApiService } from './external-api.service';
+import { Injectable } from "@angular/core";
+import { mergeMap, Observable, of } from "rxjs";
+import { environment as env } from "../../../environments/environment";
+import { ApiResponseModel, MessageModel, RequestConfigModel } from "../models";
+import { ExternalApiService } from "./external-api.service";
+
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class MessageService {
-  constructor(public externalApiService: ExternalApiService) {}
+  constructor(public externalApiService: ExternalApiService) {
+  }
 
-  getPublicResource = (): Observable<ApiResponseModel> => {
+  getPublicResource(): Observable<ApiResponseModel> {
     const config: RequestConfigModel = {
       url: `${env.api.serverUrl}/api/messages/public`,
-      method: 'GET',
-      headers: {
-        'content-type': 'application/json',
-      },
+      method: "GET"
     };
 
     return this.externalApiService.callExternalApi(config).pipe(
@@ -25,19 +24,16 @@ export class MessageService {
 
         return of({
           data: data ? (data as MessageModel) : null,
-          error,
+          error
         });
       })
     );
   };
 
-  getProtectedResource = (): Observable<ApiResponseModel> => {
+  getProtectedResource(): Observable<ApiResponseModel> {
     const config: RequestConfigModel = {
       url: `${env.api.serverUrl}/api/messages/protected`,
-      method: 'GET',
-      headers: {
-        'content-type': 'application/json',
-      },
+      method: "GET"
     };
 
     return this.externalApiService.callExternalApi(config).pipe(
@@ -46,19 +42,16 @@ export class MessageService {
 
         return of({
           data: data ? (data as MessageModel) : null,
-          error,
+          error
         });
       })
     );
   };
 
-  getAdminResource = (): Observable<ApiResponseModel> => {
+  getAdminResource(): Observable<ApiResponseModel> {
     const config: RequestConfigModel = {
       url: `${env.api.serverUrl}/api/messages/admin`,
-      method: 'GET',
-      headers: {
-        'content-type': 'application/json',
-      },
+      method: "GET"
     };
 
     return this.externalApiService.callExternalApi(config).pipe(
@@ -67,7 +60,7 @@ export class MessageService {
 
         return of({
           data: data ? (data as MessageModel) : null,
-          error,
+          error
         });
       })
     );

@@ -5,9 +5,9 @@ import { MobileNavBarTabsComponent } from "./mobile-nav-bar-tabs.component";
 import { MobileNavBarComponent } from "./mobile-nav-bar.component";
 
 export const MOBILE_COMPONENTS = [
-    MobileNavBarBrandComponent,
-    MobileNavBarButtonsComponent,
-    MobileNavBarTabComponent,
-    MobileNavBarTabsComponent,
-    MobileNavBarComponent,
+  MobileNavBarBrandComponent,
+  MobileNavBarButtonsComponent,
+  MobileNavBarTabComponent,
+  MobileNavBarTabsComponent,
+  MobileNavBarComponent
 ];

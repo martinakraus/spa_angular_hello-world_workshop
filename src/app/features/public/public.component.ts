@@ -1,14 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { MessageService } from '@app/core';
+import { Component, OnInit } from "@angular/core";
+import { MessageService } from "@app/core";
+import { SharedModule } from "@app/shared";
 
 @Component({
-  selector: 'app-public',
-  templateUrl: './public.component.html',
+  selector: "app-public",
+  standalone: true,
+  imports: [
+    SharedModule
+  ],
+  templateUrl: "./public.component.html"
 })
-export class PublicComponent implements OnInit {
-  message = '';
+export default class PublicComponent implements OnInit {
+  message = "";
 
-  constructor(public messageService: MessageService) {}
+  constructor(public messageService: MessageService) {
+  }
 
   ngOnInit(): void {
     this.messageService.getPublicResource().subscribe((response) => {
