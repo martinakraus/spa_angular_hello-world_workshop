@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { HomeComponent } from "./features/home/home.component";
+import { AuthGuard } from "@auth0/auth0-angular";
 
 const routes: Routes = [
   {
@@ -14,7 +15,8 @@ const routes: Routes = [
   },
   {
     path: "profile",
-    loadComponent: () => import("./features/profile/profile.component")
+    loadComponent: () => import("./features/profile/profile.component"),
+    canActivate: [AuthGuard],
   },
   {
     path: "public",
@@ -22,7 +24,12 @@ const routes: Routes = [
   },
   {
     path: "protected",
-    loadComponent: () => import("./features/protected/protected.component")
+    loadComponent: () => import("./features/protected/protected.component"),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'callback',
+    loadComponent: () => import("./features/callback/callback.component")
   },
   {
     path: "**",

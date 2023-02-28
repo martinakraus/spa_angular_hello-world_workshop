@@ -47,22 +47,4 @@ export class MessageService {
       })
     );
   };
-
-  getAdminResource(): Observable<ApiResponseModel> {
-    const config: RequestConfigModel = {
-      url: `${env.api.serverUrl}/api/messages/admin`,
-      method: "GET"
-    };
-
-    return this.externalApiService.callExternalApi(config).pipe(
-      mergeMap((response) => {
-        const { data, error } = response;
-
-        return of({
-          data: data ? (data as MessageModel) : null,
-          error
-        });
-      })
-    );
-  };
 }
